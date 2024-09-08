@@ -1,0 +1,200 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* background-color: #f0f0f0; */
+  background: rgb(255, 237, 160);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 237, 160, 1) 0%,
+    rgba(248, 172, 255, 1) 100%
+  );
+}
+
+/* Menu Bar Styling */
+.menu-bar {
+  background-color: #dd665b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Center the menu items */
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; /* This makes the menu take up available space */
+  margin: 0;
+}
+
+.menu li {
+  margin: 0 20px;
+}
+
+.menu li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+  background-color: #575757;
+  border-radius: 4px;
+}
+
+/* Icon Styling */
+.menu-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Content Section Below the Menu */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  padding: 0 20px; /* Adjust as needed */
+}
+
+/* Text Side */
+.text-side {
+  width: 50%; /* Set to 50% to take half of the space */
+  padding: 80px; /* Add padding to create space around the content */
+  display: flex;
+  flex-direction: column; /* Stack heading and paragraph vertically */
+  align-items: flex-start; /* Align content to the start of the text-side */
+  position: relative; /* Relative positioning for absolute child positioning */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.text-side h2 {
+  margin-bottom: 30px; /* Add margin to create space between the heading and the paragraph */
+  font-size: 36px; /* Increase the font size of the heading */
+  font-weight: bold; /* Optional: Make the heading bold */
+  letter-spacing: 2px;
+}
+
+.text-side p {
+  line-height: 1.6; /* Add line height for better readability */
+  text-align: left; /* Align text to the left */
+  max-width: 100%; /* Optional: Limit the width of the paragraph for better readability */
+}
+
+.click-me-button {
+  margin-top: 50px; /* Add top margin to position it below the paragraph */
+  padding: 10px 55px; /* Add padding inside the button */
+  font-size: 16px; /* Set font size for the button text */
+  color: white; /* Button text color */
+  background-color: #dd665b; /* Button background color */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.image-side {
+  width: 50%; /* Set to 50% to take half of the space */
+  height: 100%; /* Ensure it takes full height */
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%; /* Ensure the image covers the full height */
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+.main-container {
+  display: flex;
+  gap: 30px; /* Space between grid and card section */
+  padding: 10px; /* Decrease padding around the container */
+  height: 80vh; /* Make the container height equal to 80% of viewport height */
+  margin: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px 200px; /* First column is 150px wide, second column is 200px wide */
+  grid-template-rows: 100px 150px; /* First row is 100px tall, second row is 150px tall */
+  gap: 30px; /* Space between grid items */
+}
+
+.grid .stacked-image {
+  grid-column: 1 / 2; /* Occupy the first column */
+  grid-row: 1 / 3; /* Span both rows */
+  display: flex;
+  flex-direction: column;
+}
+
+.grid .stacked-image img {
+  width: 100%;
+  height: 50%; /* Half the height of the parent container */
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.grid .side-image {
+  grid-column: 2 / 3; /* Occupy the second column */
+  grid-row: 1 / 3; /* Span both rows */
+}
+
+.grid .side-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Reduce space between cards */
+  /* flex: 1; Make the card section take the remaining space */
+}
+
+.card {
+  background-color: #dd665b;
+  height: 30%; /* Ensure the card takes full height */
+  /* width: 30%; */
+  padding: 15px;
+  width: 350px;
+}
+
+.card h5 {
+  margin: 5px 0; /* Reduce margin for card titles */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 25px; /* Decrease font size */
+  font-weight: bold;
+  color: black;
+  letter-spacing: 5px;
+  padding-left: 20px;
+}
+.click-arrow {
+  display: flex;
+  align-items: center; /* Align text and image vertically */
+  margin-top: 10px; /* Space between the last paragraph and this section */
+  padding-left: 20px;
+}
+
+.click-arrow span {
+  font-size: 18px; /* Adjust text size as needed */
+  margin-right: 10px; /* Space between text and icon */
+}
+
+.click-arrow img {
+  width: 20px; /* Adjust icon size */
+  height: auto;
+}
